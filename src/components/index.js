@@ -61,9 +61,8 @@ const Theme = ({ state }) => {
       
       {/* Add some metatags to the <head> of the HTML. */}
       <Head>
-        <link rel="preconnect" href="https://backend.aamodtgroup.com/" />
-        <link rel="preconnect" href="https://api.websitecarbon.com/" />
-        <html lang="no" />
+        <link rel="preconnect" href={state.source.url} />
+        <html lang="en" />
         <link rel="shortcut icon" type="image/jpg" href={favicon} />
       </Head>
 
