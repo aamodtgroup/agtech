@@ -137,7 +137,7 @@ const DateWrapper = styled.p`
 `;
 
 const Content = styled.div`
-  background: var(--postbackground);
+  background-color: var(--postbackground);
   word-break: break-word;
   padding: 2rem 0;
   * {

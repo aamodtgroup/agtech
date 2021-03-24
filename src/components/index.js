@@ -99,9 +99,6 @@ const globalStyles = css`
     transition: color var(--transition);
     transition: background-color var(--transition);
   }
-  ::-webkit-scrollbar {
-    display: none;
-  }
   html {
     box-sizing: border-box;
   }
@@ -159,25 +156,6 @@ const globalStyles = css`
     padding: 34px 0;
     @media (min-width: 992px) {
       padding: 50px 0;
-    }
-  }
-  .ag-card {
-    .ag-image {
-      overflow: hidden;
-      height: 300px;
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .ag-image img {
-      transition: transform 0.5s ease;
-      object-fit: cover;
-      height: 300px;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    :hover img {
-      transform: scale(1.05);
     }
   }
 `;

@@ -1,7 +1,7 @@
 import React from "react";
 import { styled, connect } from "frontity";
 import Link from "../link";
-import logo from "../../images/logo_white.svg";
+import whitelogo from "../../images/whitelogo.svg";
 import darklogo from "../../images/darklogo.svg";
 import facebook from "../../images/facebook.png";
 import linkedin from "../../images/linkedin.png";
@@ -18,7 +18,7 @@ const MenuModal = ({ state }) => {
       <BigMenu>
         <div className="menu-header">
           <Link link="/" alt="Forside link">
-            <img src={mode === 'light' ? logo : darklogo} alt="logo" width="150px" height="50px" />
+            <img src={mode === 'light' ? whitelogo : darklogo} alt="logo" width="150px" height="50px" />
           </Link>
         </div>
         <BigMenuInner>
@@ -52,17 +52,17 @@ const MenuModal = ({ state }) => {
             })}
           </MenuContent>
           <div className="small-menu">
-            <Link link="https://www.linkedin.com/company/aamodtgroup/" target="_blank"><img src={linkedin} /></Link>
-            <Link link="https://www.facebook.com/aamodtgroup/" target="_blank"><img src={facebook} /></Link>
-            <Link link="https://www.instagram.com/aamodtgroup/" target="_blank"><img src={instagram} /></Link>
-            <Link link="https://www.github.com/aamodtgroup/" target="_blank"><img src={github} /></Link>
-            <Link link="mailto:kasper@aamodtgroup.com"><img src={email} /></Link>
+            <Link link="https://www.linkedin.com/" target="_blank"><img src={linkedin} /></Link>
+            <Link link="https://www.facebook.com/" target="_blank"><img src={facebook} /></Link>
+            <Link link="https://www.instagram.com/" target="_blank"><img src={instagram} /></Link>
+            <Link link="https://www.github.com/" target="_blank"><img src={github} /></Link>
+            <Link link="mailto:mail@example.com"><img src={email} /></Link>
           </div>
         </BigMenuInner>
         <div className="menu-footer">
-          <p className="copyright">© 2021 Aamodt Group</p>
+          <p className="copyright">© 2021 AgTech</p>
           <p className="copyright align-right">
-            <Link link="/personvern">Personvern</Link>
+            <Link link="/privacy">Privacy</Link>
           </p>
         </div>
       </BigMenu>

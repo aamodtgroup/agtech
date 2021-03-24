@@ -22,17 +22,17 @@ const Footer = ({ state }) => {
             <ul className="widget-list">
               <li>
                 <Link className="widget-list-link" link="/">
-                  Hjem
+                  Home
                 </Link>
               </li>
               <li>
                 <Link className="widget-list-link" link="/blogg/">
-                  Blogg
+                  Blog
                 </Link>
               </li>
               <li>
                 <Link className="widget-list-link" link="/kontakt-oss/">
-                  Kontakt oss
+                  Contact us
                 </Link>
               </li>
             </ul>
