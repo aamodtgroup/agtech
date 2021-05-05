@@ -1,6 +1,7 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Link from "../link";
+import Nav from "./nav";
 import MobileMenu from "./menu";
 import logo from "../../images/logo.svg";
 import darkLogo from "../../images/darklogo.svg";
@@ -18,6 +19,7 @@ const Header = ({ state }) => {
             </Link>
           </Logo>
           <div className="buttons">
+            <Nav />
             <Toggle />
             <MobileMenu />
           </div>

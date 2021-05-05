@@ -70,14 +70,8 @@ const MenuModal = ({ state }) => {
   );
 };
 
-const onClick = () => {
-  if (state.theme.isMobileMenuOpen) {
-    actions.theme.closeMobileMenu();
-  }
-};
-
 const BigMenu = styled.div`
-  z-index: 1;
+  z-index: 4;
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -95,24 +89,24 @@ const BigMenu = styled.div`
     display: flex;
     padding: 15px 50px;
     justify-content: space-between;
+    padding: 15px;
 
     img {
-      width: 150px;
-      height: 50px;
-    }
-    
-    @media (max-width: 1230px) {
-      padding: 15px;
+      width: 175px;
+      height: 64px;
     }
   }
   .menu-footer {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    height: 81px;
+    margin-top: 1rem;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    padding: 0 15px;
 
     .copyright {
       color: white !important;
@@ -129,24 +123,13 @@ const BigMenu = styled.div`
         }
       }
     }
-    .align-right {
-      text-align: right;
-    }
-    @media (max-width: 600px) {
-      flex-wrap: wrap;
-      margin-top: 1rem;
-      align-items: flex-start;
-      height: auto;
 
-      p {
-        margin: 0;
-      }
-      .align-right {
-        text-align: left;
-      }
+    .align-right {
+      text-align: left;
     }
-    @media (max-width: 1230px) {
-      padding: 0 15px;
+
+    p {
+      margin: 0;
     }
   }
 `;
@@ -155,41 +138,28 @@ const BigMenuInner = styled.div`
   z-index: 1;
   width: 100%;
   max-width: 1200px;
-  height: calc(100% - 81px - 81px);
-  margin: 0 auto;
+  height: auto;
+  margin: 3rem auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  padding: 0 15px;
 
   .small-menu {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     img {
       height: 32px;
       width: 32px;
-      margin: 5px 0;
+      margin: 5px;
 
       :hover {
         transition: .5s;
         transform: rotate(360deg);
       }
     }
-    @media (max-width: 600px) {
-      grid-template-columns: repeat(2, 1fr);
-      img {
-        margin: 5px;
-      }
-    }
-  }
-
-  @media (max-width: 600px) {
-    flex-wrap: wrap;
-    align-items: flex-start;
-    height: auto;
-  }
-  @media (max-width: 1230px) {
-    padding: 0 15px;
   }
 `;
 
@@ -203,7 +173,6 @@ const MenuContent = styled.div`
 const MenuLink = styled(Link)`
   width: 100%;
   outline: 0;
-  font-size: 70px;
   line-height: 1;
   font-weight: 600;
   text-align: left;
@@ -211,14 +180,10 @@ const MenuLink = styled(Link)`
   color: #fff;
   display: block;
   position: relative;
-  z-index: 999;
   transition: color .2s ease;
   &:hover,
   &:focus {
     color: #cce4f0 !important;
-  }
-  @media (max-width: 600px) {
-    font-size: 40px;
   }
 `;
 

@@ -4,7 +4,7 @@ import { CloseIcon, HamburgerIcon } from "./menu-icon";
 import MenuModal from "./menu-modal";
 
 function MobileMenu({ state, actions }) {
-  const { isMobileMenuOpen, mode } = state.theme;
+  const { isMobileMenuOpen } = state.theme;
   return (
     <>
       <MenuToggle onClick={actions.theme.toggleMobileMenu}>
@@ -12,10 +12,10 @@ function MobileMenu({ state, actions }) {
           <>
             {/* Add some style to the body when menu is open,
             to prevent body scroll */}
-            <CloseIcon color={mode === 'light' ? "white": "white"} size="25px" />
+            <CloseIcon color="#fff" size="20px" />
           </>
         ) : (
-          <HamburgerIcon color={mode === 'light' ? "black": "white"} size="25px" />
+          <HamburgerIcon color="var(--text)" size="20px" />
         )}
       </MenuToggle>
       {/* If the menu is open, render the menu modal */}
@@ -25,30 +25,22 @@ function MobileMenu({ state, actions }) {
 }
 
 const MenuToggle = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: transparent;
   border: 0;
   padding: 0;
   z-index: 5;
   height: 40px;
   width: 40px;
+  display: none;
   outline:0;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   &:focus {
     outline:0;
   }
-  .opensvg, .closesvg {
-    transition: all .3s ease;
-  }
-  &:hover {
-    .opensvg {
-      color:var(--menutogglehover);
-    }
-    .closesvg {
-      color:var(--menutogglehoverclose);
-    }
+  @media (max-width: 900px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 

@@ -152,11 +152,11 @@ const Container = styled.footer`
     .widget-title {
       color: var(--title);
       margin-bottom: 0.5rem;
-      font-size: 18px;
+      font-size: var(--h6size);
       font-weight: 600;
     }
     p {
-      font-size: 16px;
+      font-size: var(--footerp);
     }
     .widget-list {
       list-style: none;
@@ -168,7 +168,7 @@ const Container = styled.footer`
           text-decoration: none;
           transition: all 0.3s ease;
           color: var(--text);
-          font-size: 16px;
+          font-size: var(--footerp);
           &:hover {
             color: #0077b5;
           }
@@ -193,18 +193,19 @@ const Container = styled.footer`
     text-align: right;
   }
   .copyright {
-    font-size: 14px;
+    font-size: var(--footerp);
     margin: 1rem 0;
     color: var(--text);
   }
   .copyright a {
     color: var(--text);
+    font-size: var(--footerp);
   }
   @media screen and (max-width: 800px) {
     padding: 20px 15px;
     .footer-grid {
       display: grid;
-      grid-template-rows: auto repeat(3, auto);
+      grid-template-rows: auto repeat(4, auto);
       grid-template-columns: 1fr 1fr;
       padding-top: 25px;
       padding-bottom: 0px;

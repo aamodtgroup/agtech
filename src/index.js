@@ -23,6 +23,7 @@ const agtech = {
       menu: [],
       menuUrl: "menu",
       mode: "light",
+      text: "normal",
       isMobileMenuOpen: false,
       featured: {
         showOnList: false,
@@ -53,6 +54,9 @@ const agtech = {
           if (prefersDarkScheme.matches) {
             state.theme.mode = 'dark';
           }
+        };
+        if (window.localStorage.getItem("text") === "large") {
+          state.theme.text = 'large';
         }
       },
       setLightMode: ({state}) => {
@@ -62,6 +66,14 @@ const agtech = {
       setDarkMode: ({state}) => {
         state.theme.mode = 'dark';
         window.localStorage.setItem("mode", "dark");
+      },
+      setNormalText: ({state}) => {
+        state.theme.text = 'normal';
+        window.localStorage.setItem("text", "normal");
+      },
+      setLargeText: ({state}) => {
+        state.theme.text = 'large';
+        window.localStorage.setItem("text", "large");
       },
       beforeSSR: async ({ state, actions }) => {
         await actions.source.fetch(`/menu/${state.theme.menuUrl}/`);

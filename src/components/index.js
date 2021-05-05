@@ -97,16 +97,19 @@ const globalStyles = css`
   }
   p {
     font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    font-size: var(--textsize);
     color: var(--text);
     line-height: 1.7;
+    transition: font-size var(--transition) !important;
   }
   ul {
-    font-size: 20px;
-    color: var(--text);
+    font-size: var(--textsize);
+    transition: font-size var(--transition) !important;
   }
   li {
     margin: 1rem auto !important;
+    font-size: var(--textsize);
+    transition: font-size var(--transition) !important;
   }
   h1,
   h2,
@@ -117,9 +120,30 @@ const globalStyles = css`
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     color: var(--text);
+    transition: font-size var(--transition) !important;
+  }
+  h1 {
+    font-size: var(--h1size);
+  }
+  h2 {
+    font-size: var(--h2size);
+  }
+  h3 {
+    font-size: var(--h3size);
+  }
+  h4 {
+    font-size: var(--h4size);
+  }
+  h5 {
+    font-size: var(--h5size);
+  }
+  h6 {
+    font-size: var(--h6size);
   }
   a {
     color: var(--link);
+    font-size: var(--asize);
+    transition: font-size var(--transition) !important;
   }
   #root {
     display: flex;
